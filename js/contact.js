@@ -2,7 +2,7 @@ const addBtn = document.querySelector('#add-btn')
 const ul = document.querySelector('.list-group')
 const searchInput = document.querySelector('#search')
 addBtn.addEventListener('click', e => {
-    location.href = 'form.html'
+    location.href = 'index.html'
 })
 let data = JSON.parse(localStorage.getItem('data')) || []
 const renderData = (filteredData = data) => {
@@ -29,7 +29,7 @@ const deleteContact = (id) => {
 const editContact = (id) => {
     const contact = data.find(item => item.id === id)
     if (contact) {
-        location.href = `form.html?id=${id}&name=${contact.name}&surname=${contact.surname}&phone=${contact.phone}`
+        location.href = `index.html?id=${id}&name=${contact.name}&surname=${contact.surname}&phone=${contact.phone}`
     }
 }
 const searchContacts = () => {
